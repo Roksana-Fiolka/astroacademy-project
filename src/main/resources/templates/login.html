@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rejestracja i logowanie</title>
 <link rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous">
-
-</head>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/style.css" th:href="@{~/css/style.css}" />
+    </head>
 <body>
+<div class="main">
 
-<!-- create navigation bar ( header) -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -21,57 +24,73 @@
                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-                Login Module</a>
+            <a class="navbar-brand" href="#" th:href="@{/}">Astroacademy</a>
         </div>
     </div>
 </nav>
 
 <br>
 <br>
-<div class = "container">
     <div class = "row">
         <div class = "col-md-6 col-md-offset-3">
 
-            <h1> User Login Page </h1>
+            <h1> Strona logowania </h1>
             <form th:action="@{/login}" method="post">
 
                 <!-- error message -->
                 <div th:if="${param.error}">
-                    <div class="alert alert-danger">Invalid username or
-                        password.</div>
+                    <div class="alert alert-danger">Nieprawidłowy adres e-mail lub hasło</div>
                 </div>
 
                 <!-- logout message -->
                 <div th:if="${param.logout}">
-                    <div class="alert alert-info">You have been logged out.</div>
+                    <div class="alert alert-info">Zostałeś wylogowany</div>
                 </div>
 
-                <div class = "form-group">
-                    <label for ="username"> Username </label> :
-                    <input type="text" class = "form-control" id ="username" name = "username"
-                           placeholder="Enter Email ID" autofocus="autofocus">
-                </div>
+                <section class="sign-in">
+                    <div class="container">
+                        <div class="signin-content">
+                            <div class="signin-image">
+                                <figure>
+                                    <img th:src="@{~/images/login-image.png}" alt="sing up image">
+                                </figure>
+                                <a href="/" th:href="@{/registration}" class="signup-image-link">Załóż konto</a>
+                            </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>: <input type="password"
-                                                                   id="password" name="password" class="form-control"
-                                                                   placeholder="Enter Password" />
-                </div>
+
+                            <div class="signin-form">
+                                <h2 class="form-title">Zaloguj się</h2>
+                                <form method="post" action="login" class="register-form"
+                                      id="login-form">
+                                    <div class="form-group">
+                                        <label for="username"><i
+                                                class="zmdi zmdi-account material-icons-name"></i></label> <input
+                                            type="text" name="username" id="username"
+                                            placeholder="Adres e-mail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password"><i class="zmdi zmdi-lock"></i></label> <input
+                                            type="password" name="password" id="password"
+                                            placeholder="Hasło" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="remember-me" id="remember-me"
+                                               class="agree-term" /> <label for="remember-me"
+                                                                            class="label-agree-term"><span><span></span></span>Remember
+                                        me</label>
+                                    </div>
+                                </form>
+
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
                             <input type="submit" name="login-submit" id="login-submit"
-                                   class="form-control btn btn-primary" value="Log In" />
+                                   class="form-control btn btn-primary" value="Zaloguj się" />
                         </div>
                     </div>
                 </div>
             </form>
-            <div class="form-group">
-      <span>New user? <a href="/" th:href="@{/registration}">Register
-        here</a></span>
-            </div>
         </div>
     </div>
 </div>
