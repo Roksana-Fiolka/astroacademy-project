@@ -11,35 +11,21 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
-        question: "Inside which HTMle lement wr put the Javascript?",
-        choice1: "<acript>",
-        choice2: "<javasceipt>",
-        choice3: "<js>",
-        choice4: "<sciripting>",
-        answer: 1
-    },
-    {
-        question: "question2...?",
-        choice1: "<answer1>",
-        choice2: "<answer2",
-        choice3: "<answer3>",
-        choice4: "<anser4>",
-        answer: 3
-    },
+let questions = [];
 
-    {
-        question: "what is the correct...",
-        choice1: "<answer1>",
-        choice2: "<answer2",
-        choice3: "<answer3>",
-        choice4: "<anser4>",
-        answer: 4
-    }
+fetch("questions.json")
+    .then(res =>{
+return res.json();
+    })
+    .then(loadedQuestions =>{
+        console.log(loadedQuestions);
+        questions = loadedQuestions;
+        startGame();
+    })
+    .catch(err =>{
+        console.log(err);
+    });
 
-
-]
 
 //CONSTANTS
 
@@ -61,6 +47,8 @@ startGame = () => {
 getNewQuestion = ( ) => {
 
     if(availableQuestions.length == 0 || questionCounter  >= MAX_QUESTIONS){
+        localStorage.setItem("mostRecentScore", score);
+
         //go to end page
         return window.location.assign("/finished.html");
 
@@ -126,4 +114,3 @@ incrementScore = num =>{
 
 };
 
-startGame();

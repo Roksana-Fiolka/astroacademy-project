@@ -1,3 +1,5 @@
+
+
 /* @extend display-flex; */
 display-flex, .display-flex, .display-flex-center, .signup-content, .signin-content, .social-login, .socials {
   display: flex;
@@ -55,6 +57,51 @@ input[type=radio] {
   -webkit-appearance: radio !important;
   -o-appearance: radio !important;
   -ms-appearance: radio !important; }
+
+
+/* navbar */
+
+li,a {
+font-weight: 500;
+font-size: 2rem;
+color: #222222;
+font-family: "Linux Biolinum G";
+
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #ecf5ff;
+  border-bottom: 1px solid #fae4cf !important;
+}
+
+.logo{
+  margin-right: auto;
+  font-size: 2rem;
+  font-family: "Linux Biolinum G";
+  font-weight: bold;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color: #e9a4b0;
+}
 
 img {
   max-width: 100%;
@@ -195,8 +242,8 @@ figure {
   color: #222; }
 
 .signup-form {
-  margin-left: 75px;
-  margin-right: 75px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 34px; }
 
 .register-form {
@@ -389,14 +436,6 @@ label.valid {
     -webkit-transform: scale(1.3) translateZ(0);
     transform: scale(1.3) translateZ(0); }
 
-.zmdi-facebook {
-  background: #3b5998; }
-
-.zmdi-twitter {
-  background: #1da0f2; }
-
-.zmdi-google {
-  background: #e72734; }
 
 .signin-form {
   margin-right: 90px;

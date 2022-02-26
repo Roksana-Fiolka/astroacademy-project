@@ -1,0 +1,29 @@
+[
+  {
+    "question": "Inside which HTMle lement wr put the Javascript?",
+    "choice1": "<acript>",
+    "choice2": "<javasceipt>",
+    "choice3": "<js>",
+    "choice4": "<sciripting>",
+    "answer": 1
+  },
+  {
+    "question": "question2...?",
+    "choice1": "<answer1>",
+    "choice2": "<answer2",
+    "choice3": "<answer3>",
+    "choice4": "<anser4>",
+    "answer": 3
+  },
+
+  {
+    "question": "what is the correct...",
+    "choice1": "<answer1>",
+    "choice2": "<answer2",
+    "choice3": "<answer3>",
+    "choice4": "<anser4>",
+    "answer": 4
+  }
+
+
+]

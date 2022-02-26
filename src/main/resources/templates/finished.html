@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,7 +11,17 @@
 <div class="container">
 
     <div id="finished" class="justify-center flex-column">
-        12345555
+        <h1 id="finalScore">  </h1>
+        <form>
+            <input type="text"
+                   name="username"
+                   id="username"
+                   placeholder="username"/>
+            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"> Save</button>
+            <a class="btn" th:href="@{/quiz1}"> Play again</a>
+            <a class="btn" th:href="@{/}"> homepage</a>
+        </form>
+
     </div>
 </div>
 

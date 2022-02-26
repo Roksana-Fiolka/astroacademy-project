@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/style.css" th:href="@{~/css/style.css}" />
+</head>
+<body>
+<header>
+<div class ="navbar" th:fragment="navbar">
+    <div class="logo" href="#" th:href="@{/}"> Astroacademy </div>
+    <nav>
+    <ul class="nav_links">
+        <li><a th:href="@{#}">Courses</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+    </ul>
+    </nav>
+</div>
+</header>
+
+</body>
+</html>
