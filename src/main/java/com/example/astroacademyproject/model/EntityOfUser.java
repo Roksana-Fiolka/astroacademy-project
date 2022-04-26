@@ -17,7 +17,7 @@ import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User {
+public class EntityOfUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,11 +43,11 @@ public class User {
 
     private Collection < Role > roles;
 
-    public User() {
+    public EntityOfUser() {
 
     }
 
-    public User(String firstName, String lastName, String email, String password, Collection < Role > roles) {
+    public EntityOfUser(String firstName, String lastName, String email, String password, Collection < Role > roles) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;

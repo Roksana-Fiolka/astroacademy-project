@@ -1,16 +1,17 @@
 package com.example.astroacademyproject.web.dto;
 
-public class UserRegistrationDto {
+//Data Transfer Object Pattern
+public class UserRegistrationDataTransfer {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
-    public UserRegistrationDto() {
+    public UserRegistrationDataTransfer() {
 
     }
 
-    public UserRegistrationDto(String firstName, String lastName, String email, String password) {
+    public UserRegistrationDataTransfer(String firstName, String lastName, String email, String password) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;

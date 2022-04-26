@@ -1,28 +1,28 @@
 [
   {
-    "question": "Inside which HTMle lement wr put the Javascript?",
-    "choice1": "<acript>",
-    "choice2": "<javasceipt>",
-    "choice3": "<js>",
-    "choice4": "<sciripting>",
-    "answer": 1
+    "question": "Jak możemy zakomentować kod w JavaScript?",
+    "choice1": "**To jest komentarz",
+    "choice2": "//To jest komentarz",
+    "choice3": "<!--To jest komentarz-->",
+    "choice4": "/* To jest komentarz",
+    "answer": 2
   },
   {
-    "question": "question2...?",
-    "choice1": "<answer1>",
-    "choice2": "<answer2",
-    "choice3": "<answer3>",
-    "choice4": "<anser4>",
-    "answer": 3
+    "question": "Jak stworzyć funkcję w JavaScript?",
+    "choice1": "function Funkcja()",
+    "choice2": "function Funkcja",
+    "choice3": "function = Funkcja()",
+    "choice4": "function.Funkcja",
+    "answer": 1
   },
 
   {
-    "question": "what is the correct...",
-    "choice1": "<answer1>",
-    "choice2": "<answer2",
-    "choice3": "<answer3>",
-    "choice4": "<anser4>",
-    "answer": 4
+    "question": "Jaki będzie wynik tego kodu?  console.log(020 - 018);",
+    "choice1": "error",
+    "choice2": "2",
+    "choice3": "02",
+    "choice4": "5",
+    "answer": 2
   }
 
 

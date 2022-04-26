@@ -1,12 +1,12 @@
 package com.example.astroacademyproject.repository;
 
-import com.example.astroacademyproject.model.User;
+import com.example.astroacademyproject.model.EntityOfUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository  extends JpaRepository<User, Long> {
+public interface UserRepository  extends JpaRepository<EntityOfUser, Long> {
 
-    User findByEmail(String email);
+    EntityOfUser findByEmail(String email);
 
 }

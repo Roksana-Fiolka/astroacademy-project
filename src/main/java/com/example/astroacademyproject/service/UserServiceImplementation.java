@@ -1,9 +1,9 @@
 package com.example.astroacademyproject.service;
 
 import com.example.astroacademyproject.model.Role;
-import com.example.astroacademyproject.model.User;
+import com.example.astroacademyproject.model.EntityOfUser;
 import com.example.astroacademyproject.repository.UserRepository;
-import com.example.astroacademyproject.web.dto.UserRegistrationDto;
+import com.example.astroacademyproject.web.dto.UserRegistrationDataTransfer;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,6 @@ import java.util.stream.Collectors;
 public class UserServiceImplementation implements UserService {
 
 
-
-
     private UserRepository userRepository;
 
     @Autowired
@@ -37,8 +35,8 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public User save(UserRegistrationDto registrationDto) {
-        User user = new User(registrationDto.getFirstName(),
+    public EntityOfUser save(UserRegistrationDataTransfer registrationDto) {
+        EntityOfUser user = new EntityOfUser(registrationDto.getFirstName(),
                 registrationDto.getLastName(), registrationDto.getEmail(),
                 passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new Role("ROLE_USER")));
 
@@ -48,7 +46,7 @@ public class UserServiceImplementation implements UserService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = userRepository.findByEmail(username);
+        EntityOfUser user = userRepository.findByEmail(username);
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }

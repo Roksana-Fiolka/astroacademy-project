@@ -11,16 +11,10 @@
 <div class="container">
 
     <div id="finished" class="justify-center flex-column">
-        <h1 id="finalScore">  </h1>
-        <form>
-            <input type="text"
-                   name="username"
-                   id="username"
-                   placeholder="username"/>
-            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"> Save</button>
-            <a class="btn" th:href="@{/quiz1}"> Play again</a>
-            <a class="btn" th:href="@{/}"> homepage</a>
-        </form>
+        <h1 id="finalScore"> </h1>
+
+            <a class="btn" th:href="@{/quiz1}"> Jeszcze raz</a>
+            <a class="btn" th:href="@{/}"> Powrót do strony głównej</a>
 
     </div>
 </div>
