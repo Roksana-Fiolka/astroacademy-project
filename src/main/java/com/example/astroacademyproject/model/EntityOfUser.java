@@ -41,13 +41,13 @@ public class EntityOfUser {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
 
-    private Collection < Role > roles;
+    private Collection <UserRole> roles;
 
     public EntityOfUser() {
 
     }
 
-    public EntityOfUser(String firstName, String lastName, String email, String password, Collection < Role > roles) {
+    public EntityOfUser(String firstName, String lastName, String email, String password, Collection <UserRole> roles) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -85,10 +85,10 @@ public class EntityOfUser {
     public void setPassword(String password) {
         this.password = password;
     }
-    public Collection < Role > getRoles() {
+    public Collection <UserRole> getRoles() {
         return roles;
     }
-    public void setRoles(Collection < Role > roles) {
+    public void setRoles(Collection <UserRole> roles) {
         this.roles = roles;
     }
 }

@@ -1,12 +1,12 @@
 :root{
-    background-color: #ecf5ff;
+    background-color: #e9a4b0;
     font-size: 62.5%;
 
 }
 
 *{
     box-sizing: border-box;
-font-family: Arial;
+    font-family: Tahoma;
     margin: 0;
     padding: 0;
     color: #333;
@@ -20,8 +20,8 @@ h4{
 }
 
 h1{
-    font-size: 5.4rem;
-    color: #56a5eb;
+    font-size: 46px;
+    color: #dc3545;
     margin-bottom: 5rem;
 }
 
@@ -31,13 +31,13 @@ h1 > span{
 }
 
 h2{
-    font-size: 4.2rem;
+    font-size: 33rem;
     margin-bottom: 4rem;
     font-weight: 700;
 }
 
 h3{
-    font-size: 2.8rem;
+    font-size: 26rem;
     font-weight: 500;
 }
 
@@ -81,10 +81,10 @@ h3{
     padding:1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #56a5eb;
+    border: 0.1rem solid #dc3545;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #56a5eb;
+    color: #dc3545;
     background-color: white;
 }
 
@@ -120,11 +120,11 @@ btn:hover{
 
 .choice-prefix{
     padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
+    background-color: #dc3545;
     color:white;
 }
 
-.choice-text{
+.option-text{
     padding: 1.5rem;
     width:100%;
 }
@@ -141,30 +141,30 @@ btn:hover{
 /* HUD */
 
 #hud {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-.hud-prefix{
+.head-prefix{
     text-align: center;
     font-size: 2rem;
 
 }
 
-.hud-main-text{
+.head-main-text{
     text-align: center;
 }
 
 #progressBar{
     width: 20rem;
     height: 4rem;
-    border: 0.3rem solid #56a5eb;
+    border: 0.3rem solid #dc3545;
     margin-top: 2rem;
 }
 /* progress bar starts at 0% */
-#progressBarFull{
+#progressionBarComplete{
     height: 3.4rem;
-    background-color: #56a5eb;
+    background-color: #dc3545;
     width: 0%;
 }
 

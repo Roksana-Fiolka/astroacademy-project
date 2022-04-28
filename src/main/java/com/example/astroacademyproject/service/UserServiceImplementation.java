@@ -1,6 +1,6 @@
 package com.example.astroacademyproject.service;
 
-import com.example.astroacademyproject.model.Role;
+import com.example.astroacademyproject.model.UserRole;
 import com.example.astroacademyproject.model.EntityOfUser;
 import com.example.astroacademyproject.repository.UserRepository;
 import com.example.astroacademyproject.web.dto.UserRegistrationDataTransfer;
@@ -38,7 +38,7 @@ public class UserServiceImplementation implements UserService {
     public EntityOfUser save(UserRegistrationDataTransfer registrationDto) {
         EntityOfUser user = new EntityOfUser(registrationDto.getFirstName(),
                 registrationDto.getLastName(), registrationDto.getEmail(),
-                passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new Role("ROLE_USER")));
+                passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new UserRole("ROLE_USER")));
 
         return userRepository.save(user);
     }
@@ -53,7 +53,7 @@ public class UserServiceImplementation implements UserService {
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthorities(user.getRoles()));
     }
 
-    private Collection <? extends GrantedAuthority > mapRolesToAuthorities(Collection < Role > roles) {
+    private Collection <? extends GrantedAuthority > mapRolesToAuthorities(Collection <UserRole> roles) {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
 

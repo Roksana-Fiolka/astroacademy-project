@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //Kontoler, który pozwoli wyświetlić stronę z rejestracją
 @Controller
-@RequestMapping("/registration")
+@RequestMapping("/registration") //url
 public class RegistrationController {
 
    private UserService userService;

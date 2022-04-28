@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Registration and Login App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="all"
@@ -15,8 +15,8 @@
 <br>
 
 <div class="container">
-    <h1>Rozpocznij nauk?</h1>
-    Welcome <span sec:authentication="principal.username"> User</span>
+    <h1>Rozpocznij naukę</h1>
+    Witaj <span sec:authentication="principal.username"> User</span>
 </div>
 <br>
 <br>
@@ -24,25 +24,25 @@
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="container-fluid">
                 <h1 style="text-align: center">Javascript</h1>
                 <div class="quiz-button">
-                    <a href="/quiz1.html" th:href="@{/quiz1}" class="btn btn-lg btn-primary" type="button"> Rozpocznij kurs </a>
-                    <a href="/solar.html" th:href="@{/solar}" class="btn btn-lg btn-primary" type="button"> solar kurs </a>
+                    <a href="/quiz1.html" th:href="@{/quiz1}" class="btn btn-lg btn-primary" type="button"> Rozpocznij quiz </a>
                 </div>
         </div>
             </div>
-        <div class="carousel-item">
+    <div class="carousel-item">
             <div class="container-fluid">
-                <h1>TEXT</h1>
+                <h1 style="text-align: center">Animacja układu słonecznego</h1>
+            </div>
+            <div class="quiz-button">
+            <a href="/solar.html" th:href="@{/solar}" class="btn btn-lg btn-primary" type="button"> Układ słoneczny </a>
             </div>
         </div>
-        <div class="carousel-item">
-        </div>
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

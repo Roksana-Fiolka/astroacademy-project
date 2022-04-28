@@ -34,28 +34,25 @@
 
 
                            <div class="form-group">
-                               <label for="firstName"><i
-                                       class="zmdi zmdi-account material-icons-name"></i></label>
+                               <label for="firstName"></label>
                                <input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus" placeholder="Imię" />
                            </div>
 
 
                            <div class="form-group">
-                               <label for="lastName"><i
-                                       class="zmdi zmdi-account material-icons-name"></i> </label> <input
+                               <label for="lastName"> </label> <input
                                        id="lastName" class="form-control" th:field="*{lastName}"
                                        required autofocus="autofocus"  placeholder="Nazwisko" />
                            </div>
 
-
                            <div class="form-group">
-                               <label for="email"><i class="zmdi zmdi-email"></i></label> <input
+                               <label for="email"></label> <input
                                    id="email" class="form-control" th:field="*{email}" required
                                    autofocus="autofocus" placeholder="E-mail" />
                            </div>
 
                            <div class="form-group">
-                               <label class="control-label" for="password"> <i class="zmdi zmdi-lock"></i></label> <input
+                               <label class="control-label" for="password"></label> <input
                                    id="password" class="form-control" type="password"
                                    th:field="*{password}" required autofocus="autofocus" placeholder="Hasło" />
                            </div>
@@ -67,9 +64,9 @@
                 </div>
             </form>
         </div>
-                        <div class="signup-image">
+                        <div class="registration-img">
                             <figure>
-                                <img th:src="@{~/images/login-image.png}" alt="sing up image">
+                                <img th:src="@{~/images/login-image.png}">
                             </figure>
     </div>
 </div>

@@ -213,17 +213,17 @@ position: relative;
 .signup-content {
   padding: 75px 0; }
 
-.signup-form, .signup-image, .signin-form, .signin-image {
+.signup-form, .registration-img, .signin-form, .signin-image {
   width: 50%;
   overflow: hidden; }
 
-.signup-image {
+.registration-img {
   margin: 0 55px; }
 
 .form-title {
   margin-bottom: 33px; }
 
-.signup-image {
+.registration-img {
   margin-top: 45px; }
 
 figure {
@@ -453,7 +453,7 @@ label.valid {
     -o-order: 2;
     -ms-order: 2; }
 
-  .signup-form, .signup-image, .signin-form, .signin-image {
+  .signup-form, .registration-img, .signin-form, .signin-image {
     width: auto; }
 
   .social-login {

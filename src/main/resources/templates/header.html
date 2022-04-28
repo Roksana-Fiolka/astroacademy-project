@@ -12,7 +12,6 @@
     <div class="logo" href="#" th:href="@{/}"> Astroacademy </div>
     <nav>
     <ul class="nav_links">
-        <li><a th:href="@{#}">Courses</a></li>
             <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
     </ul>
     </nav>

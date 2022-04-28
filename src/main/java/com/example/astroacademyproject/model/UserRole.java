@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class Role {
+public class UserRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,11 +15,11 @@ public class Role {
     private String name;
 
 
-    public Role() {
+    public UserRole() {
 
     }
 
-    public Role(String name) {
+    public UserRole(String name) {
         super();
         this.name = name;
     }
